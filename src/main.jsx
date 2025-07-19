@@ -4,11 +4,12 @@ import './index.css'
 import App from './App.jsx'
 import {BrowserRouter} from 'react-router-dom'
 import StoreContextProvider from './Context/StoreContext.jsx'
+import { HashRouter } from 'react-router-dom';
+
 createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
+  <BrowserRouter basename="/Tomato/">
     <StoreContextProvider>
       <App />
     </StoreContextProvider>
-  </BrowserRouter>  
-
+  </BrowserRouter>
 )

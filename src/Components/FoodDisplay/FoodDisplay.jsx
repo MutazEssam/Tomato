@@ -1,28 +1,22 @@
 import React, { useContext } from 'react'
 import './FoodDisplay.css'
 import { StoreContext } from '../../Context/StoreContext'
+import FoodItem from '../FoodItem/FoodItem'
 
 const FoodDisplay = ({ category }) => {
   const { food_list } = useContext(StoreContext)
 
-  // Filter food list based on category
-  const filteredList = category === "All"
-    ? food_list
-    : food_list.filter(item => item.category === category)
-
   return (
     <div className='FoodDisplay' id='FoodDisplay'>
       <h2>Top Dishes You Like</h2>
-
-      <div className="food-grid">
-        {filteredList.map((item, index) => (
-          <div className="food-card" key={index}>
-            <img src={item.image} alt={item.name} />
-            <h3>{item.name}</h3>
-            <p>{item.price} EGP</p>
-          </div>
-        ))}
-      </div>
+        <div className='Food-Display-List'>
+          {food_list.map((item,index)=>{
+            if(category==="All"||category===item.category)
+            {
+               return <FoodItem key={index} id={item._id} name={item.name} description={item.description} price={item.price} image={item.image}></FoodItem>
+            }
+          })}
+        </div>
     </div>
   )
 }

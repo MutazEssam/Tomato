@@ -1,0 +1,105 @@
+.Place-Order {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 40px;
+  background-color: #f9f9f9;
+  border-radius: 20px;
+  max-width: 1200px;
+  margin: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.Place-Order-Left,
+.Place-Order-Right {
+  flex: 1 1 400px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
+}
+
+.Place-Order-Left .title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.Place-Order input {
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.Place-Order input:focus {
+  border-color: #ff6347;
+  outline: none;
+}
+
+.Multi-Fields {
+  display: flex;
+  gap: 20px;
+}
+
+.Multi-Fields input {
+  flex: 1;
+}
+
+.cart-Total h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #222;
+}
+
+.cart-total-details {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  font-size: 1rem;
+  border-bottom: 1px solid #eee;
+  color: #444;
+}
+
+.cart-total-details:last-child {
+  font-weight: bold;
+  border-bottom: none;
+}
+
+.cart-Total button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 20px;
+  background-color: #ff6347;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cart-Total button:hover {
+  background-color: #e5533c;
+}
+
+.cart-Promocode {
+  margin-top: 30px;
+}
+
+.cart-Promocode p {
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: #333;
+}
+
+.cart-PromoCode-Input input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
